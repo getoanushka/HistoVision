@@ -25,6 +25,13 @@ client = AsyncIOMotorClient(mongo_url)
 db = client[os.environ['DB_NAME']]
 
 app = FastAPI(title="HistoVision API", version="1.0.0")
+app.add_middleware(
+    CORSMiddleware,
+    allow_credentials=True,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 api_router = APIRouter(prefix="/api")
 
 # ------------------- SAMPLE IMAGES -------------------
@@ -244,15 +251,6 @@ async def resume_bullets():
     if md_path.exists():
         return {"markdown": md_path.read_text(encoding="utf-8")}
     return {"markdown": "# RESUME_BULLETS.md not found"}
-
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_credentials=True,
-    allow_origins=["*"],
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
 
 app.include_router(api_router)
 
