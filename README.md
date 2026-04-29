@@ -98,6 +98,4 @@ histovision/
 | `REACT_APP_BACKEND_URL` | `http://localhost:8001` | Backend base URL |
 
 ## Deployment
-When deploying, update `REACT_APP_BACKEND_URL` in `frontend/.env` to your backend's public URL and set `CORS_ORIGINS` in `backend/.env` to your frontend's domain.
-
-See `RESUME_BULLETS.md` for ready-to-paste resume bullets and interview talking points.
+🔗 Live App (Render): https://histovision-frontend.onrender.com — may take ~30–60s to load (cold start).
