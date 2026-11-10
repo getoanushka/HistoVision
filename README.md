@@ -83,19 +83,7 @@ histovision/
 | DELETE | `/api/history/{id}`    | Delete an analysis |
 | GET    | `/api/resume-bullets`  | Resume markdown |
 
-## Environment Variables
 
-### Backend (`backend/.env`)
-| Variable | Default | Description |
-|----------|---------|-------------|
-| `MONGO_URL` | `mongodb://localhost:27017` | MongoDB connection string |
-| `DB_NAME` | `test_database` | MongoDB database name |
-| `CORS_ORIGINS` | `*` | Comma-separated allowed origins |
-
-### Frontend (`frontend/.env`)
-| Variable | Default | Description |
-|----------|---------|-------------|
-| `REACT_APP_BACKEND_URL` | `http://localhost:8001` | Backend base URL |
 
 ## Deployment
 🔗 Live App (Render): https://histovision-frontend.onrender.com — may take ~30–60s to load (cold start).
